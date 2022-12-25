@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+$purple-dark: #392C72;
+$gray-dark: #4F4F4F;
+$gray-middle: #828282;
+$gray-light: #BDBDBD;
+
+$purple-light: #9E8CFC;
+$red: #EA5455;
+$yellow: #F2C94C;
+$green: #6FCF97;
+
+$color-bg: #FFFFFF;
+$blue-dark: #283046;
+$blue-darken: #161D31;
+
+$font-text: 'Montserrat', sans-serif;
+
+.full-container {
+    display: flex;
+}
+
+.sidebar {
+    min-height: 100vh;
+    position: sticky;
+    left: 0;
+    top: 0;
+    background: $color-bg;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px 0;
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__logo {
+        width: 33px;
+        height: 32px;
+        svg, img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $color-bg;
+        position: relative;
+    }
+    &__categories {
+        margin-bottom: 30px;
+    }
+    &__title {
+        margin-bottom: 12.5px;
+    }
+    &__menu {
+        margin-bottom: 35px;
+    }
+    &__link {
+        height: 46px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        &:hover {
+            background-color: $purple-light;
+        }
+    }
+    &__icon {
+        width: 26px;
+        position: relative;
+        svg {
+            width: 100%;
+            height: auto;
+            path {
+                fill: $gray-dark;
+            }
+        }
+    }
+    &__link:hover > &__icon {
+        svg path {
+            fill: #FFFFFF;
+        }
+    }
+    &__notice {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: -8px;
+        right: -12px;
+        font-family: $font-text;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: $gray-dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.notice_red {
+    background-color: $red;
+    color: #fff;
+}
+.notice_green {
+    background-color: $green;
+}
+.notice_yellow {
+    background-color: $yellow;
+}
+
+
+.sidebar-visible {
+    width: 220px;
+    .sidebar__header {
+        padding: 0 11px;
+    }
+    .sidebar__logo {
+        margin-inline-end: 7px;
+    }
+    .sidebar__name {
+        font-family: $font-text;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: $purple-dark;
+        margin-inline-end: 28.5px;
+    }
+    .sidebar__button:after {
+        content: url(/src/images/arrow-hidden.svg);
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .sidebar__title {
+        font-family: $font-text;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $gray-middle;
+        padding: 0 15px;
+    }
+    .sidebar__link {
+        padding: 0 15px;
+    }
+    .sidebar__link:hover > .sidebar__text  {
+        color: #FFFFFF;
+    }
+    .sidebar__icon {
+        margin-inline-end: 20px;
+    }
+    .sidebar__text {
+        font-family: $font-text;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray-dark;
+    }
+}
+
+.sidebar-hidden {
+    width: 86px;
+    .sidebar__header {
+        justify-content: center;
+        position: relative;
+    }
+    .sidebar__name {
+        display: none;
+    }
+    .sidebar__button {
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        &:after {
+            content: url(/src/images/arrow-visible.svg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .sidebar__title {
+       color: transparent;
+       background-image: url(/src/images/line.svg);
+       background-position: center;
+       background-size: inherit;
+       background-repeat: no-repeat;
+    }
+    .sidebar__link {
+        padding: 0 30px;
+    }
+    .sidebar__text {
+        display: none;
+    }
+}
+
+main {
+    width: 100%;
+    padding: 30px 25px;
+
+}
+
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 22px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__end {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+   }
+   &__language {
+        margin-inline-end: 60px;
+        display: flex;
+        align-items: center;
+   }
+   &__flag-icon {
+        margin-inline-end: 20px;
+   }
+   &__select {
+        border: none;
+        -moz-appearance: none; /* Firefox */
+        -webkit-appearance: none; /* Safari and Chrome */
+        appearance: none;
+        font-family: $font-text;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: $gray-dark;
+   }
+   &__login {
+        width: 36px;
+        height: 36px;
+        margin-inline-start: 50px;
+        position:  relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &_login {
+            &:after {
+                content: " ";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #6FCF97;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 10;
+            }
+        }
+   }
+}
+
+.menu {
+    margin: 0 -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__item {
+        padding: 0 10px;
+    }
+    &__link {
+        svg path {
+            fill: $gray-dark;
+        }
+        &:hover {
+            svg path {
+                fill: $purple-light;
+            }
+        }
+    }
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    $color-bg: #283046;
+    body {
+        background: #161D31;
+    }
+    .sidebar {
+        background: $color-bg;
+        &__icon svg path {
+            fill: #FFFFFF;
+        }
+    }
+    .sidebar-visible .sidebar__text {
+        color: #FFFFFF;
+    }
+    header {
+        background: $color-bg
+    }
+    .menu__link svg path {
+        fill: #FFFFFF;
+    }
+}
+
