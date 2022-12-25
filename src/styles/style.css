@@ -113,7 +113,7 @@
   margin-inline-end: 28.5px;
 }
 .sidebar-visible .sidebar__button:after {
-  content: url(/src/images/arrow-hidden.svg);
+  content: url(../src/images/arrow-hidden.svg);
   width: 20px;
   height: 20px;
   position: absolute;
@@ -163,7 +163,7 @@
   transform: translateY(-50%);
 }
 .sidebar-hidden .sidebar__button:after {
-  content: url(/src/images/arrow-visible.svg);
+  content: url(../src/images/arrow-visible.svg);
   width: 20px;
   height: 20px;
   position: absolute;
@@ -172,7 +172,7 @@
 }
 .sidebar-hidden .sidebar__title {
   color: transparent;
-  background-image: url(/src/images/line.svg);
+  background-image: url(../src/images/line.svg);
   background-position: center;
   background-size: inherit;
   background-repeat: no-repeat;
