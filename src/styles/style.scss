@@ -130,7 +130,7 @@ $font-text: 'Montserrat', sans-serif;
         margin-inline-end: 28.5px;
     }
     .sidebar__button:after {
-        content: url(../src/images/arrow-hidden.svg);
+        content: url(../images/arrow-hidden.svg);
         width: 20px;
         height: 20px;
         position: absolute;
@@ -179,7 +179,7 @@ $font-text: 'Montserrat', sans-serif;
         top: 50%;
         transform: translateY(-50%);
         &:after {
-            content: url(../src/images/arrow-visible.svg);
+            content: url(../images/arrow-visible.svg);
             width: 20px;
             height: 20px;
             position: absolute;
@@ -189,7 +189,7 @@ $font-text: 'Montserrat', sans-serif;
     }
     .sidebar__title {
        color: transparent;
-       background-image: url(../src/images/line.svg);
+       background-image: url(../images/line.svg);
        background-position: center;
        background-size: inherit;
        background-repeat: no-repeat;
