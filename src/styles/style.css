@@ -264,25 +264,4 @@ main {
   fill: #9E8CFC;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #161D31;
-  }
-  .sidebar {
-    background: #283046;
-  }
-  .sidebar__icon svg path {
-    fill: #FFFFFF;
-  }
-  .sidebar-visible .sidebar__text {
-    color: #FFFFFF;
-  }
-  header {
-    background: #283046;
-  }
-  .menu__link svg path {
-    fill: #FFFFFF;
-  }
-}
-
 /*# sourceMappingURL=style.css.map */

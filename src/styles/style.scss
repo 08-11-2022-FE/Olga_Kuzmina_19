@@ -289,27 +289,3 @@ main {
     }
 }
 
-
-
-@media (prefers-color-scheme: dark) {
-    $color-bg: #283046;
-    body {
-        background: #161D31;
-    }
-    .sidebar {
-        background: $color-bg;
-        &__icon svg path {
-            fill: #FFFFFF;
-        }
-    }
-    .sidebar-visible .sidebar__text {
-        color: #FFFFFF;
-    }
-    header {
-        background: $color-bg
-    }
-    .menu__link svg path {
-        fill: #FFFFFF;
-    }
-}
-
